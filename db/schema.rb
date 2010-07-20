@@ -18,14 +18,14 @@ ActiveRecord::Schema.define(:version => 20100525144035) do
   end
 
   create_table "project_statuses", :force => true do |t|
-    t.boolean  "online",       :default => false, :null => false
-    t.boolean  "success",      :default => false, :null => false
+    t.boolean  "online",                      :default => false, :null => false
+    t.boolean  "success",                     :default => false, :null => false
     t.string   "url"
     t.datetime "published_at"
     t.integer  "project_id"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.text     "error"
+    t.text     "error",        :limit => 255
   end
 
   add_index "project_statuses", ["project_id"], :name => "index_project_statuses_on_project_id"
