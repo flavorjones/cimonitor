@@ -14,6 +14,7 @@ gem "mysql"
 gem "libxml-ruby", "1.1.2"
 
 group :test do
+  gem "sqlite3-ruby"
   gem "rspec-rails", ">= 1.1.11"
   gem "jasmine", "0.10.3.1"
 end
